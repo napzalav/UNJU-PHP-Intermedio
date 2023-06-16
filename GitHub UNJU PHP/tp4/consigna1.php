@@ -1,20 +1,35 @@
 <?php
-//trim() elimina los espacios al principio y al final
-//strlen() devuelve la longitud de una cadena de texto. Es util para determinar la cantidad de caracteres presentes en una cadena, lo cual puede ser utilizado para realizar validaciones o ajustes de formato.
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $cadena = $_POST["cadena"]; //"cadena" es el nombre del campo del formulario del cual queremos obtener la cadena de caracteres. cuando se ingresa se almacena como un array dentro de la variable llamada $cadena
+if (isset($_POST['convertir'])) {
+    // obtengo la cadena enviada desde el formulario camturando el submit de nombre "convertir"
+    $cadena = $_POST['cadena']; //almaceno el texto en la variable $cadena
+
+    // verifico que la cadena no esté vacía
+    if (empty($cadena)) {
+        echo "La cadena no puede estar vacía.";
+        exit; // se detiene la ejecución si la cadena está vacía
+    }
+
+    // Controlo la cantidad de caracteres
+    if (strlen($cadena) > 80) {
+        echo "La cadena no puede tener más de 80 caracteres.";
+        exit; // la ejecución del if se detiene si superan los 80 caracteres
+    }
+
+    // para convertir la cadena a mayúsculas
+    $cadena = strtoupper($cadena);
+
+    //para eliminar espacios en blanco al principio y al final
+    $cadena = trim($cadena);
 }
+?>
 
-function controlar(){
-
-}
-
-
-
-
-
-
-
-
-
+<?php
+if (isset($_POST['convertir'])) :
+    echo "<h3>Resultado:</h3>";
+    if (!empty($cadena)) :
+        echo "<p>Cadena convertida a mayúsculas: $cadena</p>";
+    else :
+        echo "<p>La cadena está vacía.</p>";
+    endif;
+endif;
 ?>
