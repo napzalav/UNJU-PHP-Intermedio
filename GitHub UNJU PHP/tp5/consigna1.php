@@ -1,8 +1,8 @@
 <?php 
 echo '<a href="http://localhost/unju/tp5/consigna1.html">Inténtalo de nuevo</a><br><br>';
 class Persona { //creamos la clase Persona
-    private $nombre; //creamos la propiedad nombre y su nivel de proteccion publica
-    private $apellido;  //creamos la propiedad apellido y su nivel de proteccion publica
+    public $nombre; //creamos la propiedad nombre y su nivel de proteccion publica
+    public $apellido;  //creamos la propiedad apellido y su nivel de proteccion publica
     protected $edad; // creamos la propiedad edad y su nivel de proteccion protegido
 
     public function setName($nombre){ //creamos el método setName
