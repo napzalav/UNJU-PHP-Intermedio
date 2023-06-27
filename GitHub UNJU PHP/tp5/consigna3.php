@@ -1,7 +1,7 @@
 <?php
 echo '<a href="http://localhost/unju/tp5/consigna3.html">Inténtalo de nuevo</a><br><br>';
 
-class CabeceraPagina { //se crea la clase CabeceraPagina
+class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo, ubicacion, colorFondo y fuente
     public $titulo;
     public $ubicacion;
     public $colorFondo;
