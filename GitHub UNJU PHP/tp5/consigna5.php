@@ -11,14 +11,17 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
     public $haciendollamada;
 
     //1-Crear un constructor con parámetros para inicializar los valores de los atributos del objeto a crear. El estado inicial es encendido y haciendollamada en No
-    public function __construct($marca, $color, $so, $numero){
+    public function __construct($marca, $color, $so, $numero, $numerollamado, $estado, $haciendollamada){
         $this->marca = $marca;
         $this->color = $color;
         $this->so = $so;
         $this->numero = $numero;
-        $this->numerollamado = "";
-        $this->estado = "encendido";
-        $this->haciendollamada = "NO";
+        $this->numerollamado = $numerollamado;
+        $this->estado = $estado;
+        $this->haciendollamada = $haciendollamada;
+        
+        //$this->estado = "encendido";
+        //$this->haciendollamada = "NO";
     }
 
     //creamos los metodos
@@ -30,14 +33,15 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
             $this->haciendollamada = "SI";  //la propiedad $haciendollamada se establece en SI xq el celular está en medio de una llamada
             echo "Llamando al número: $numerollamado <br>"; 
         } else { //si el celular esta apagado o en medio de otra llamada muestra el siguiente mensaje
-            echo "No se puede realizar la llamada";
+            echo "No se puede realizar la llamada <br>";
         }
     }
 
     //3-El método terminarLlamada debe modificar las propiedades respectivas
-    public function terminarLlamada(){
+    public function terminarLlamada($numerollamado){
         if ($this->haciendollamada === "SI"){
-            $this->numerollamado = "";
+            $this->numerollamado = $numerollamado;
+            //$this->numerollamado = "";
             $this->haciendollamada = "NO";
             echo "Llamada finalizada <br>";
         } else {
@@ -49,7 +53,7 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
     public function apagarCelular(){
         if ($this->estado === "encendido") {
             $this->estado = "apagado";
-            echo "Celular apagado";
+            echo "Celular apagado <br>";
         } else {
             echo "El celular ya está apagado <br>";
         }
@@ -85,31 +89,36 @@ if (isset($_POST["submit"])) {
     $so = $_POST["so"];
     $numero = $_POST["numero"];
     $numerollamado = $_POST["numerollamado"];
-    //$estado = $_POST["estado"];
-    //$haciendollamada = $_POST["haciendollamada"];
+    $estado = $_POST["estado"];
+    $haciendollamada = $_POST["haciendollamada"];
 
     //6-Cree dos objetos tipo TelefonoCelular llamados celular1 y celular2. Imprima el estado de los dos objetos.
-    $celular1 = new TelefonoCelular($marca, $color, $so, $numero);
-    $celular2 = new TelefonoCelular("Iphone", "Azul", "Iphone", "111222333");
+    //a $celular1 le asignamos los valores enviados desde el formulario
+    //a $celular2 le asignamos valores manualmente
+    $celular1 = new TelefonoCelular($marca, $color, $so, $numero, $numerollamado, $estado, $haciendollamada);
+    $celular2 = new TelefonoCelular("Iphone", "Azul", "Iphone", "111222333", "666555666", "encendido", "SI");
+    echo "<pre>";
+    var_dump($celular1);
+    var_dump($celular2);
+    echo "</pre>";
 
     //imprimimos el estado de los celulares
     echo "<b>Estado del celular1: </b>" . $celular1->getEstado() . "<br>";
     echo "<b>Estado del celular2: </b>" . $celular2->getEstado() . "<br>";
 
     //8-Simule el siguiente comportamiento con el celular 1: ***Apague el celular***Haga una llamada***Termine la llamada***Encienda el celular***Termine la llamada(apagarCelular)***Imprima el estado del celular1
-    $celular1->apagarCelular();
-    $celular1->hacerLlamada("555222111");
-    $celular1->terminarLlamada();
-    $celular1->encenderCelular();
-    $celular1->terminarLlamada();
+    echo "<b>Esta es una simulación de comportamiento con el celular1: </b><br>";
+    echo $celular1->apagarCelular();
+    echo $celular1->hacerLlamada($numerollamado);
+    echo $celular1->terminarLlamada($numerollamado);
+    echo $celular1->encenderCelular();
+    echo $celular1->terminarLlamada($numerollamado);
     echo "<br>Estado del celular1: " . $celular1->getEstado() . "<br>";
 
     //9-Simule el siguiente comportamiento con el celular2: ***Haga una llamada***Imprima el estado del celular2
-    $celular2->hacerLlamada("121212333");
+    echo "<b>Esta es una simulación de comportamiento con el celular2: </b><br>";
+    $celular2->hacerLlamada($numerollamado);
     echo "<br>Estado del celular2: " . $celular2->getEstado() . "<br>";
 
-
 }
-
-
 ?>
