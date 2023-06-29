@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo Práctico 3</title>
 </head>
-
 <body>
     <h1>“FUNCIONES EN PHP” </h1>
     <h3>Consigna 4</h3>
     <p>Desarrollar una función que acepte una cadena de caracteres y la convierta en mayúscula</p>
     <p>Click para visualizar las otras consignas:</p>
     <ul>
-        <li><a href="http://localhost/unju/tp3/consigna1.php">Consigna 1</a></li>
-        <li><a href="http://localhost/unju/tp3/consigna2.php">Consigna 2</a></li>
-        <li><a href="http://localhost/unju/tp3/consigna3.php">Consigna 3</a></li>
-        <li><a href="http://localhost/unju/tp3/consigna4.php">Consigna 4</a></li>
-        <li><a href="http://localhost/unju/tp3/consigna5.php">Consigna 5</a></li>
+        <li><a href="./consigna1.php">Consigna 1</a></li>
+        <li><a href="./consigna2.php">Consigna 2</a></li>
+        <li><a href="./consigna3.php">Consigna 3</a></li>
+        <li><a href="./consigna4.php">Consigna 4</a></li>
+        <li><a href="./consigna5.php">Consigna 5</a></li>
     </ul>
 
     <form action="#" method="post">
@@ -26,8 +25,7 @@
         <input type="submit" name="convertir" value="Convertir">
     </form>
 
-    <?php 
-    
+    <?php    
     if ($_SERVER["REQUEST_METHOD"] == "POST") { //aqui se verifica si ingresamos un texto o no a traves del formulario. verifica si el método de envío del formulario es POST. Esto significa que se espera que el formulario haya sido enviado.
         $cadena = $_POST["cadena"]; //"cadena" es el nombre del campo del formulario del cual queremos obtener el valor. cuando se ingresa la cadena de texto se almacena como un array dentro de lavariable llamada $cadena
     }
@@ -48,6 +46,5 @@
     echo $cadenaConvertida;
 
     ?>
-
 </body>
 </html>
