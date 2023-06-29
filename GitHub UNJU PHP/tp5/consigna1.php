@@ -1,5 +1,5 @@
 <?php 
-echo '<a href="http://localhost/unju/tp5/consigna1.html">Inténtalo de nuevo</a><br><br>';
+echo '<a href="./consigna1.html">Inténtalo de nuevo</a><br><br>';
 class Persona { //creamos la clase Persona
     public $nombre; //creamos la propiedad nombre y su nivel de proteccion publica
     public $apellido;  //creamos la propiedad apellido y su nivel de proteccion publica
@@ -33,7 +33,6 @@ class Persona { //creamos la clase Persona
     }
 }
 
-
 if (isset($_POST) && !empty($_POST)){ //comprobamos que los datos lleguen del formulario  y no se encuentre vacio
     if (empty($_POST["nombre"]) || empty($_POST["apellido"]) || empty($_POST["edad"])){
         echo "Por favor completa todos los campos";
@@ -44,12 +43,12 @@ if (isset($_POST) && !empty($_POST)){ //comprobamos que los datos lleguen del fo
         $nombre = $_POST["nombre"];
         $apellido = $_POST["apellido"];
         $edad = $_POST["edad"];
-    
+
         //almacenamos en el objeto Persona los datos tratados con setName 
         $persona->setName($nombre);
         $persona->setApellido($apellido);
         $persona->setEdad($edad);
-    
+
         //mostramos los datos procesados
         echo "Nombre /s: " . $persona->getName() . "<br>";
         echo "Apellido /s: " . $persona->getApellido() . "<br>";

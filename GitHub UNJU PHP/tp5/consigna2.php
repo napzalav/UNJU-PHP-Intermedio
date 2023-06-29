@@ -1,5 +1,5 @@
 <?php 
-echo '<a href="http://localhost/unju/tp5/consigna2.html">Inténtalo de nuevo</a><br><br>';
+echo '<a href="./consigna2.html">Inténtalo de nuevo</a><br><br>';
 
 class Empleado { //creamos la clase Empleado
     public $nombre; //creamos la propiedad nombre para el empleado

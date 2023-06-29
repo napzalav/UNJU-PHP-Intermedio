@@ -1,5 +1,5 @@
 <?php
-echo '<a href="http://localhost/unju/tp5/consigna4.html">Inténtalo de nuevo</a><br><br>';
+echo '<a href="./consigna4.html">Inténtalo de nuevo</a><br><br>';
 
 if (isset($_POST) && !empty($_POST)){ //obtenemos los datos del formulario y revisamos que no se encuentren vacios
     $nombreAlumno = $_POST["nombre"]; //asignamos los datos obtenidos a las variables 
@@ -42,7 +42,6 @@ if (isset($_POST) && !empty($_POST)){ //obtenemos los datos del formulario y rev
     //echo "Nota 2: " . $alumno->nota2 . "<br>";
     //echo "Nota 3: " . $alumno->nota3 . "<br>";
     //echo "Nota 4: " . $alumno->nota4 . "<br>";
-
 }
 
     echo "<pre>";
@@ -59,5 +58,4 @@ if (isset($_POST) && !empty($_POST)){ //obtenemos los datos del formulario y rev
     var_dump($nota4 * 0.4);
     //var_dump($notaFinal);
     var_dump($alumno->notaFinal);
-
 ?>

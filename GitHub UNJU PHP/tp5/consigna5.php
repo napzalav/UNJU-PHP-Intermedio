@@ -1,5 +1,5 @@
 <?php
-echo '<a href="http://localhost/unju/tp5/consigna5.html">Inténtalo de nuevo</a><br><br>';
+echo '<a href="./consigna5.html">Inténtalo de nuevo</a><br><br>';
 
 class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedades
     public $marca;
@@ -19,7 +19,6 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
         $this->numerollamado = $numerollamado;
         $this->estado = $estado;
         $this->haciendollamada = $haciendollamada;
-        
         //$this->estado = "encendido";
         //$this->haciendollamada = "NO";
     }
@@ -39,7 +38,7 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
 
     //3-El método terminarLlamada debe modificar las propiedades respectivas
     public function terminarLlamada($numerollamado){
-        if ($this->haciendollamada === "SI"){
+        if ($this->haciendollamada === "SI"){   //para finalizar una llamada necesito estar en una, verifico que la variable haciendollamada sea "SI"
             $this->numerollamado = $numerollamado;
             //$this->numerollamado = "";
             $this->haciendollamada = "NO";
@@ -127,6 +126,5 @@ if (isset($_POST["submit"])) {
     echo $celular2->hacerLlamada($numerollamado);
     echo "*Imprima el estado del celular2*";
     echo "<br>Estado del celular2: " . $celular2->getEstado() . "<br>";
-
 }
 ?>

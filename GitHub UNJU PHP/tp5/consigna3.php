@@ -1,5 +1,5 @@
 <?php
-echo '<a href="http://localhost/unju/tp5/consigna3.html">Inténtalo de nuevo</a><br><br>';
+echo '<a href="./consigna3.html">Inténtalo de nuevo</a><br><br>';
 
 class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo, ubicacion, colorFondo y fuente
     public $titulo;
@@ -18,7 +18,7 @@ class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo,
         echo '<div style="background-color: ' . $this->colorFondo . '; color: ' . $this->fuente . ';">';
     
         $style = ''; // Variable para almacenar los estilos adicionales para la etuiqueta <h1>. Dependiendo de la ubicacion seleccionada y procesada en el switch almacenará "center", "left" o "right"
-    
+
         switch ($this->ubicacion) { //con switch se evalua el valor almacenado en la propiedad $ubicacion
             case 'centro': //case verifica que el valor de $ubicacion elegido mediante el formulario sea "centro", funciona de la misma forma para los casos "derecha" y "izquierda"
                 $style = 'text-align: center;';
@@ -44,7 +44,7 @@ class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo,
     }
 }
 
-//para obtener los valores del formulario y comprobamos que no se encuentre vacio y que se haya hecho click en el boton con el nombre "submit"
+//para obtener los valores del formulario y que se haya hecho click en el boton con el nombre "submit"
 if (isset($_POST["submit"])) {
     $titulo = $_POST["titulo"];
     $ubicacion = $_POST["ubicacion"];
