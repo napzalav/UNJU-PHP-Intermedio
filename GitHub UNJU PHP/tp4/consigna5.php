@@ -1,5 +1,5 @@
 <?php 
-echo '<a href="http://localhost/unju/tp4/consigna5.html">Volver al HTML de la consigna 5</a><br><br>';
+echo '<a href="./consigna5.html">Volver al HTML de la consigna 5</a><br><br>';
 
 //almaceno los nombres de las ciudades dentro del array $ciudades
 $ciudades = ["Salta", "Mendoza", "Santa Fe", "Mar del Plata", "Córdoba"];

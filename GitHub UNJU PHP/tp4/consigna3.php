@@ -1,5 +1,5 @@
 <?php 
-echo '<a href="http://localhost/unju/tp4/consigna3.html">Regresar al HTML de la consigna 3</a><br><br>';
+echo '<a href="./consigna3.html">Regresar al HTML de la consigna 3</a><br><br>';
 
 if (isset($_POST) && !empty($_POST)) { //verificamos que se haya enviado un email a traves del formulario y que este campo no se encuentre vacío
     $email = $_POST["email"]; //"email" es el nombre del campo del formulario del cual queremos obtener el valor. cuando se ingresa el email se almacena como un array dentro de lavariable llamada $email
@@ -15,5 +15,4 @@ if (isset($_POST) && !empty($_POST)) { //verificamos que se haya enviado un emai
         echo "El email es válido";
     }
 }
-
 ?>

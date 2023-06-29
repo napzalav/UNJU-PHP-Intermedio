@@ -1,5 +1,5 @@
 <?php 
-echo '<a href="http://localhost/unju/tp4/consigna4.html">Volver a cargar el DNI</a><br><br>';
+echo '<a href="./consigna4.html">Volver a cargar el DNI</a><br><br>';
 
 if (isset($_POST)){ //verificamos que se haya enviado un dni a traves del formulario
     if (empty($_POST["dni"])){ //alternativamente tambien puedo verificar que no se encuentre vacío poniendo en el input del formulario un "required" (*HTML linea 30)
@@ -21,5 +21,4 @@ if (isset($_POST)){ //verificamos que se haya enviado un dni a traves del formul
         }     
     }
 }
-
 ?>

@@ -1,5 +1,5 @@
 <?php
-echo '<a href="http://localhost/unju/tp4/consigna2.html">Regresar al HTML de la consigna 2</a>';
+echo '<a href="./consigna2.html">Regresar al HTML de la consigna 2</a>';
 
 $array1 = array("#","$","%","&","[","]","{","}","*","/","=");
 $array2 = "";
@@ -7,31 +7,23 @@ $calculo = '$var=numero1/(numero2*numero3)';
 $res = str_replace($array1,$array2,$calculo);
 $res = substr($res,1,2);
 
-?>
-
-<?php 
-
-echo "<br>";
-echo "<br>";
-
+echo "<br><br>";
 echo '<code>
-<?php
-<br>
-$array1 = array("#","$","%","&","[","]","{","}","*","/","=");
-<br>
-$array2 = "";
-<br>
-$calculo = "$var=numero1/(numero2*numero3)";
-<br>
-$res = str_replace($array1,$array2,$calculo);
-<br>
-$res = substr($res,1,2);
-<br>
-?>
+    <?php
+        <br>
+        $array1 = array("#","$","%","&","[","]","{","}","*","/","=");
+        <br>
+        $array2 = "";
+        <br>
+        $calculo = "$var=numero1/(numero2*numero3)";
+        <br>
+        $res = str_replace($array1,$array2,$calculo);
+        <br>
+        $res = substr($res,1,2);
+        <br>
+    ?>
 </code>';
-
 echo "<h3>Conclusión:</h3>";
-
 echo '<pre>';
 
 echo "En la linea 1 se determina el valor del array1 <br>";
@@ -43,9 +35,7 @@ var_dump($array2);
 echo '<br>En la línea 3 se determina el valor de la variable $calculo <br>';
 var_dump($calculo);
 
-echo "<br>";
-
-echo '<br>En la línea 4 se aplica la funcion str_replace() la cual reemplaza todos los caracteres del array1 por la cadena vacía del array2 que se encuentran dentro de la variable $calculo <br>';
+echo '<br><br>En la línea 4 se aplica la funcion str_replace() la cual reemplaza todos los caracteres del array1 por la cadena vacía del array2 que se encuentran dentro de la variable $calculo <br>';
 echo 'El resultado se almacena dentro  la variable $res <br>';
 var_dump(str_replace($array1,$array2,$calculo));
 
@@ -53,14 +43,10 @@ echo '<br>En la línea 5 utilizamos la funcion substr() para obtener una subcade
 echo '<br>Esta subcadena empieza en el índice 1 que corresponde a la letra "a" y tiene una longitud de 2 caracteres y el resultado se almacena nuevamente dentro de la variable $res<br>';
 var_dump($res);
 
-
 //COMENTARIOS
-
 //cuando se usan las dobles comillas en la tercera linea, se presenta un error "Cannot implicitly convert 'void' to 'string" ya que no se declara un valor en la variable $var. Para solucionarlo se cambia las comillas dobles por las simples  
 //Original//    $calculo = "$var=numero1/(numero2*numero3)";
 //Cambio//      $calculo = '$var=numero1/(numero2*numero3)';
-
-
 
 //DEFINICION
 //str_replace()
@@ -79,8 +65,6 @@ var_dump($res);
 // $res = 'varnumero1(numero2numero3)';
 //como vemos todos los elementos que estaban dentro del array1 fueron reemplazados en su totalidad por "nada" almacenado en el array2
 
-
-
 //DEFINICION
 //substr()
 //Extrae una parte específica de una cadena de texto. Es útil para obtener subcadenas a partir de una cadena más grande, por ejemplo, para extraer una porción de un nombre de archivo o para obtener los primeros caracteres de un texto.
@@ -98,5 +82,4 @@ var_dump($res);
 
 //Si llamamos a la variable $res el resultado final es:
 //$res = 'ar';
-
 ?>
