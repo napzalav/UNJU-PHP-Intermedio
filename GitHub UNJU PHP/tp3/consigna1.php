@@ -11,13 +11,8 @@
     <h3>Consigna 1</h3>
     <p>Realizar una función que acepte dos números y devuelva el producto de ambos. Cargar los dos valores a través de un formulario.</p>
     <p>Click para visualizar las otras consignas:</p>
-    <ul>
-        <li><a href="./consigna1.php">Consigna 1</a></li>
-        <li><a href="./consigna2.php">Consigna 2</a></li>
-        <li><a href="./consigna3.php">Consigna 3</a></li>
-        <li><a href="./consigna4.php">Consigna 4</a></li>
-        <li><a href="./consigna5.php">Consigna 5</a></li>
-    </ul>
+    
+    <?php include 'menu.php'; ?>
 
     <form action="" method="post">
         <p>Ingrese los números a multiplicar:</p>
@@ -27,12 +22,8 @@
     </form>
     <br>
 
-    <?php
-    function producto($valor1, $valor2){
-        $producto = $valor1 * $valor2;
-        return $producto;
-    }
-
+    <?php include 'funciones.php';
+    
     if (isset($_POST) && !empty($_POST)) {
         $valor1 = $_POST['valor1'];
         $valor2 = $_POST['valor2'];

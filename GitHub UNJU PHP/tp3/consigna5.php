@@ -11,30 +11,20 @@
     <h3>Consigna 5</h3>
     <p>Realizar una función que acepte el lado de un cuadrado y calcule su perímetro y su superficie (No imprimir dentro de la función).</p>
     <p>Click para visualizar las otras consignas:</p>
-    <ul>
-        <li><a href="./consigna1.php">Consigna 1</a></li>
-        <li><a href="./consigna2.php">Consigna 2</a></li>
-        <li><a href="./consigna3.php">Consigna 3</a></li>
-        <li><a href="./consigna4.php">Consigna 4</a></li>
-        <li><a href="./consigna5.php">Consigna 5</a></li>
-    </ul>
+    <?php include 'menu.php'; ?>
 
     <form action="#" method="post">
         <p><b>Ingresar longitud de lado de cuadrado:</b></p>
-        <input type="text" id="lado" name="lado" required>
+        <input type="number" id="lado" name="lado" required>
         <input type="submit" name="calcular" value="Calcular">
     </form>
     <br>
 
-    <?php 
+    <?php include 'funciones.php';
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") { //aqui se verifica si ingresamos un valor o no a traves del formulario. verifica si el método de envío del formulario es POST. Esto significa que se espera que el formulario haya sido enviado.
         $lado = $_POST["lado"]; //"lado" es el nombre del campo del formulario del cual queremos obtener el valor. cuando se ingresa la longitud del lado del cuadrado se almacena como un array dentro de la variable llamada $lado
-    }
-    function infoCuadrado($lado){
-        $perimetro = (4*$lado);
-        $superficie = $lado * $lado;
-        return array($perimetro, $superficie);  //almaceno los resultados de perimetro y superficie en un array
-    }    
+    
 
     $datos = infoCuadrado($lado);   //los resultados son guardados en la variable $datos
 
@@ -44,7 +34,7 @@
     echo "El perímetro del cuadrado cuyo lado mide $lado es de: " . $perCuadrado . "mts.";
     echo "<br>";
     echo "La superficie del cuadrado cuyo lado mide $lado es de: " . $supCuadrado . "mts<sup>2</sup>."; //para escribir el potenciador "al cuadrado" uso la etiqueta de superindice <sup></sup>
-
+    }
     ?>
 
 </body>
