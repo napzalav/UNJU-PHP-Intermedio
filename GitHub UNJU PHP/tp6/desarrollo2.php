@@ -1,8 +1,10 @@
 <?php 
+//use MyNamespace\Empleado;
+//use MyNamespace\Postulante;
 include 'funciones.php';
 include 'CPersona.php';
-//include 'CPostulante.php';
-//include 'CEmpleado.php';
+include 'CPostulante.php';
+include 'CEmpleado.php';
 
 echo '<a href="./consigna2.php">Completar formulario</a><br><br>';
 
@@ -15,7 +17,7 @@ if (isset($_POST) && !empty($_POST)){ //verifico que los campos esten completos 
     $puesto = $_POST["puesto"];
     $ingreso = $_POST["ingreso"];
     $cv = $_FILES["cv"]["name"];
-
+    $basico = "";
     //var_dump($ingreso);
     //echo "<br>";
 
@@ -26,10 +28,14 @@ if (isset($_POST) && !empty($_POST)){ //verifico que los campos esten completos 
     $edad = $postulante->calcularEdad();
 
     // Crear una instancia de la clase Empleado
-    $empleado = new Empleado($nombre, $nacimiento, $direccion, $sexo, $disponibilidad, $puesto, $ingreso);
+    $empleado = new Empleado($nombre, $nacimiento, $direccion, $sexo, $disponibilidad, $puesto, $ingreso, $basico);
 
     // Llamo a la función calcularAntiguedad() y mostrar el resultado en pantalla
     $antiguedad = $empleado->calcularAntiguedad();
+
+    echo "La edad de $nombre es de: " . $edad;
+    echo "<br><br>";
+    echo "La antiguedad de $nombre es de: " . $antiguedad;
 
     echo "<pre>";
     var_dump($postulante);

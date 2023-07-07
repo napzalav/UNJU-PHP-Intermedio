@@ -1,8 +1,8 @@
 <?php 
-use MyNamespace\Empleado;
+//use MyNamespace\Empleado;
 
 include 'funciones.php';
-include 'CPerson.php';
+include 'CPersona.php';
 include 'CEmpleado.php';
 
 //echo '<a href="./consigna3.php">Completar formulario</a><br><br>';
