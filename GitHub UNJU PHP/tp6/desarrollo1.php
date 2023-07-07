@@ -13,14 +13,14 @@ if (isset($_POST) && !empty($_POST)){ //verifico que los campos esten completos 
     $puesto = $_POST["puesto"];
     $cv = $_FILES["cv"]["name"];
 
-    crearDirectorioUploads(); //esta funcion fue creada a partir de la formulacion de **1** en funciones.php
+    crearDirectorioUploads(); //esta funcion fue creada a partir de la formulacion de **1** en funciones.php y sirve para crear un directorio si es que no existe y mover el archivo seleccionado a la carpeta detino "uploads"
 
 // Mostrar el mensaje de confirmación (valido el sexo para arrojar un mensaje predeterminado)
-if ($sexo === "femenino") {
-    echo '<span style="color: green;">La postulante ' . $nombre . ' se inscribió en el puesto ' . $puesto . '.</span>';
-} else {
-    echo '<span style="color: green;">El postulante ' . $nombre . ' se inscribió en el puesto ' . $puesto . '.</span>';
-}
+    if ($sexo === "femenino") {
+        echo '<span style="color: green;">La postulante ' . $nombre . ' se inscribió en el puesto ' . $puesto . '.</span>';
+    } else {
+        echo '<span style="color: green;">El postulante ' . $nombre . ' se inscribió en el puesto ' . $puesto . '.</span>';
+    }
 
 echo "<pre>";
 echo "Estos son los datos cargados<br>";

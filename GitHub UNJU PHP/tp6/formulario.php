@@ -1,4 +1,6 @@
+<!-- modificar el action de esta parte según la consigna a resolver
 <form action="desarrollo1.php" method="post" enctype="multipart/form-data">
+-->
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" required><br>
         
@@ -27,6 +29,7 @@
             <option value="RRHH">RRHH</option>
         </select><br>
 
+<!-- modificar el final del form segun vaya a utilizarse
         <label for="cv">Cargar CV (.pdf, .doc, .jpg)</label>
         <input type="file" name="cv" id="cv" accept=".pdf, .doc, .jpg" required><br>
 
@@ -34,3 +37,4 @@
         <input type="submit" name="enviar" value="Enviar postulación">
     </form>
     <br>
+-->

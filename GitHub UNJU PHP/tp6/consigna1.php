@@ -27,7 +27,19 @@
 
     <h3>***********DESARROLLO***********</h3>
 
-    <?php include 'formulario.php'; ?>
+    <?php 
+    echo '<form action="desarrollo1.php" method="post" enctype="multipart/form-data">';
+    
+    include 'formulario.php'; 
+    
+    echo '<label for="cv">Cargar CV (.pdf, .doc, .jpg)</label>';
+    echo '<input type="file" name="cv" id="cv" accept=".pdf, .doc, .jpg" required><br>';
+
+    echo '<br>';
+    echo '<input type="submit" name="enviar" value="Enviar postulación">';
+    echo '</form>';
+    echo '<br>';
+    ?>
 
 </body>
 </html>
