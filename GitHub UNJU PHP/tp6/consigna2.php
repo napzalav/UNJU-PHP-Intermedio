@@ -35,22 +35,41 @@
 
     <h3>***********DESARROLLO***********</h3>
 
-    <?php 
-    echo '<form action="desarrollo2.php" method="post" enctype="multipart/form-data">';
-    
-    include 'formulario.php';
+    <div class="formulario-container">
+        <?php 
+        echo '<form class="formulario" action="desarrollo2.php" method="post" enctype="multipart/form-data">';
+        //echo '<h2>POSTULANTE</h2>';
+        
+        include 'formulario.php';
 
-    echo '<label for="ingreso">Fecha de ingreso</label>';
-    echo '<input type="date" name="ingreso" required><br>';
+        echo '<label for="ingreso">Fecha de ingreso</label>';
+        echo '<input type="date" name="ingreso" required><br>';
 
-    echo '<label for="cv">Cargar CV (.pdf, .doc, .jpg)</label>';
-    echo '<input type="file" name="cv" id="cv" accept=".pdf, .doc, .jpg" required><br>';
-    
-    echo '<br>';
-    echo '<input type="submit" name="enviar" value="Enviar">';
-    echo '</form>';
-    echo '<br>';
-    ?>
+        echo '<label for="cv">Cargar CV (.pdf, .doc, .jpg)</label>';
+        echo '<input type="file" name="cv" id="cv" accept=".pdf, .doc, .jpg" required><br>';
+        
+        echo '<br>';
+        echo '<input type="submit" name="enviar" value="Enviar">';
+        echo '</form>';
+        echo '<br>';
+        ?>
 
+        <?php /*
+        echo '<form class="formulario" action="desarrollo2.php" method="post" enctype="multipart/form-data">';
+        echo '<h2>EMPLEADO</h2>';
+        
+        include 'formulario.php';
+
+        echo '<label for="ingreso">Fecha de ingreso</label>';
+        echo '<input type="date" name="ingreso" required><br>';
+
+        echo '<br>';
+        echo '<input type="submit" name="enviar" value="Enviar">';
+        echo '</form>';
+        echo '<br>';
+        */
+        ?>
+        
+    </div>
 </body>
 </html>

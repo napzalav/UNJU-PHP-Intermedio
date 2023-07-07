@@ -28,7 +28,7 @@
     <h3>***********DESARROLLO***********</h3>
 
     <?php 
-    echo '<form action="desarrollo1.php" method="post" enctype="multipart/form-data">';
+    echo '<form class="formulario" action="desarrollo1.php" method="post" enctype="multipart/form-data">';
     
     include 'formulario.php'; 
     
