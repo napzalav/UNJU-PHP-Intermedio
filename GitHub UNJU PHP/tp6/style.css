@@ -4,41 +4,34 @@ body {
     padding: 20px;
 }
 
-h1 {
+h2 {
     text-align: center;
 }
 
-h3 {
-    margin-top: 30px;
+.formulario-container {
+    display: flex;
 }
 
-ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-/* Estilos generales del formulario */
-form {
+.formulario {
+    flex: 1;
+    margin-right: 10px;
     max-width: 500px;
-    margin: 0 auto;
     padding: 20px;
     background-color: aliceblue;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-/* Estilos de las etiquetas de los campos */
-label {
+.formulario label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: rgb(4, 4, 102);
 }
 
-/* Estilos de los campos de entrada de texto */
-input[type="text"],
-input[type="date"],
-select {
+.formulario input[type="text"],
+.formulario input[type="date"],
+.formulario select {
     width: 100%;
     padding: 5px;
     margin-bottom: 10px;
@@ -46,8 +39,7 @@ select {
     border-radius: 5px;
 }
 
-/* Estilos del botón de enviar */
-input[type="submit"] {
+.formulario input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -55,4 +47,3 @@ input[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
-
