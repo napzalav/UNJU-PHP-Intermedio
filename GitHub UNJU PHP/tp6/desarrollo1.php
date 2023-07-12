@@ -13,6 +13,14 @@ if (isset($_POST) && !empty($_POST)){ //verifico que los campos esten completos 
     $puesto = $_POST["puesto"];
     $cv = $_FILES["cv"]["name"];
 
+    echo "helloword";
+    echo "<pre>";
+    var_dump($nombre);
+    var_dump($sexo);
+    var_dump($puesto);
+    echo "</pre>";
+
+
     crearDirectorioUploads(); //esta funcion fue creada a partir de la formulacion de **1** en funciones.php y sirve para crear un directorio si es que no existe y mover el archivo seleccionado a la carpeta detino "uploads"
 
 // Mostrar el mensaje de confirmación (valido el sexo para arrojar un mensaje predeterminado)

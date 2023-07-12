@@ -40,13 +40,13 @@
 
     <h3>***********DESARROLLO***********</h3>
 
-    <form class="formulario" action="desarrollo4.php">
+    <form class="formulario" action="desarrollo4.php" method="post" enctype="multipart/form-data">
     <?php include 'formulario.php'; ?>
 
         <label for="ingreso">Fecha de ingreso</label>
         <input type="date" name="ingreso" required><br>
 
-        <label for="cantidad">Cantidad realizada</label>
+        <label for="cantidad">Cantidad de trabajos realizados</label>
         <input type="number" name="cantidad" id="cantidad" required><br><br>
 
         <input type="submit" name="enviar" value="Calcular sueldo">
