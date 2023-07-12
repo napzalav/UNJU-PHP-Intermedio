@@ -1,5 +1,7 @@
-<?php //include 'CPerson.php';
+<?php 
+//include 'CPersona.php';
 //namespace MyNamespace;
+
 
 
 ?>

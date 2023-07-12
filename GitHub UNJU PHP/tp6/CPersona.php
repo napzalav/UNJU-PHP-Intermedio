@@ -1,4 +1,8 @@
 <?php 
+require_once 'CEmpleado.php';
+require_once 'CEmpleadoContable.php';
+require_once 'CEmpleadoRRHH.php';
+require_once 'CEmpleadoInformatico.php';
 //namespace MyNamespace;
 class Persona {
     protected $nombre;
@@ -120,6 +124,5 @@ class Informatico extends Empleado {
         return $this->basico + $extra;
     }
 }
-
 
 ?>
