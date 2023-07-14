@@ -3,7 +3,6 @@
 
 include 'funciones.php';
 include 'CPersona.php';
-include 'CEmpleado.php';
 
 //echo '<a href="./consigna3.php">Completar formulario</a><br><br>';
 

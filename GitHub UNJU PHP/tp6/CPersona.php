@@ -1,8 +1,4 @@
-<?php 
-require_once 'CEmpleado.php';
-require_once 'CEmpleadoContable.php';
-require_once 'CEmpleadoRRHH.php';
-require_once 'CEmpleadoInformatico.php';
+<?php
 //namespace MyNamespace;
 class Persona {
     protected $nombre;
