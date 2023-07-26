@@ -20,8 +20,8 @@ try {
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
 
     /****************************************** MODIFICAR ESTOS DATOS ***********************************************/
-    $mail->Username   = 'tu_email@extension.com';                     //SMTP username
-    $mail->Password   = 'tu_contraseña';                               //SMTP password
+    $mail->Username   = '';                     //SMTP username
+    $mail->Password   = '';                               //SMTP password
     /*****************************************************************************************/
 
     $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
