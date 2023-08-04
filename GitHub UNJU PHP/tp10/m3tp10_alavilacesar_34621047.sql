@@ -1,4 +1,5 @@
 -- TP 10
+--detalle a tener en cuenta con relación a ***las backsticks (``)*** parece no tener impacto si en las consultas llevan o no backsticks en los nombre de las tablas
 
 --Punto 1 : Descargue e importe la Base de Datos llamada miempresa.sql. Luego realice las siguientes consultas y muestre los resultados obtenidos
 
@@ -9,12 +10,23 @@ SELECT * FROM `empleados`;
 SELECT * FROM `departamentos`;
 
 --c. Obtener los datos de los empleados con cargo ‘Secretaria’.
+SELECT * FROM empleados WHERE cargo = 'secretaria';
+
+--d. Obtener el nombre y salario de los empleados.
+SELECT nombre, salario FROM empleados;
+
+--e. Obtener los datos de los empleados vendedores, ordenados por nombre.
+SELECT * FROM empleados WHERE cargo = 'vendedor' ORDER BY nombre;
+
+--f. Listar el nombre de los departamentos.
+
+SELECT nombre FROM departamentos; --en este caso me trae todos los nombres que existe en la base de datos
+
+SELECT DISTINCT nombre FROM departamentos; --si quiero que los nombres de los departamentos no se repitan uso DISTINCT
+
+--g. Obtener el nombre y cargo de todos los empleados, ordenado por salario.
 
 
-d. Obtener el nombre y salario de los empleados.
-e. Obtener los datos de los empleados vendedores, ordenados por nombre.
-f. Listar el nombre de los departamentos.
-g. Obtener el nombre y cargo de todos los empleados, ordenado por salario.
 h. Listar los salarios y comisiones de los empleados del departamento 2000,
 ordenado por comisión.
 i. Listar todas las comisiones.
