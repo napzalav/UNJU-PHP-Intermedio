@@ -13,7 +13,7 @@ if (isset($_POST) && !empty($_POST)){ //comprobamos que los datos lleguen del fo
         $apellido = $_POST["apellido"];
         $edad = $_POST["edad"];
 
-        //almacenamos en el objeto Persona los datos tratados con setName 
+        //almacenamos en el objeto Persona los datos tratados con setName
         $persona->setName($nombre);
         $persona->setApellido($apellido);
         $persona->setEdad($edad);

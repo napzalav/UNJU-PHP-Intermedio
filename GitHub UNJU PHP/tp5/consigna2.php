@@ -16,7 +16,7 @@
     <form action="desarrollo2.php" method="post">
         <label for="nombre">Nombre del empleado</label>
         <input type="text" name="nombre" required>
-        
+
         <br>
         <label for="sueldo">Sueldo</label>
         <input type="number" name="sueldo" required>

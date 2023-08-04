@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>“Programacion Orientada a Objetos”</h1>
-    
+
     <?php include 'menu.php'; ?>
-    
+
     <h3>Consigna 1</h3>
     <p>Crear la clase Persona con las siguientes propiedades:</p>
     <ul>
@@ -26,14 +26,14 @@
     <form action="desarrollo1.php" method="post">
         <label for="nombre">Ingrese su nombre</label>
         <input type="text" name="nombre" required>
-        
+
         <br>
         <label for="apellido">Ingrese su apellido</label>
         <input type="text" name="apellido" required>
 
         <br>
         <label for="edad">Ingrese su edad</label>
-        <input type="text" name="edad" required>      
+        <input type="text" name="edad" required>
         <input type="submit" name="enviar">
     </form>
     <br>

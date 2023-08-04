@@ -2,7 +2,7 @@
 
 echo '<a href="./consigna5.php">Inténtalo de nuevo</a><br><br>';
 
-//obtenemos los datos enviados por formulario 
+//obtenemos los datos enviados por formulario
 if (isset($_POST["submit"])) {
     $marca = $_POST["marca"];
     $color = $_POST["color"];

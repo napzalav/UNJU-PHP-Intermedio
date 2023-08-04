@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Empleado { //creamos la clase Empleado
     public $nombre; //creamos la propiedad nombre para el empleado
     public $sueldo; //creamos la propiedad sueldo

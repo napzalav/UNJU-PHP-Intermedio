@@ -1,4 +1,4 @@
-<?php 
+<?php
 class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo, ubicacion, colorFondo y fuente
     public $titulo;
     public $ubicacion;
@@ -14,7 +14,7 @@ class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo,
 
     public function mostrarCabecera() {
         echo '<div style="background-color: ' . $this->colorFondo . '; color: ' . $this->fuente . ';">';
-    
+
         $style = ''; // Variable para almacenar los estilos adicionales para la etuiqueta <h1>. Dependiendo de la ubicacion seleccionada y procesada en el switch almacenará "center", "left" o "right"
 
         switch ($this->ubicacion) { //con switch se evalua el valor almacenado en la propiedad $ubicacion
@@ -28,9 +28,9 @@ class CabeceraPagina { //se crea la clase CabeceraPagina y los atributos titulo,
                 $style = 'text-align: left;';
                 break;
         }
-    
+
         echo '<h1 style="' . $style . '">' . $this->titulo . '</h1>'; //se aplica el estilo directamente en la etiqueta <h1>.
-    
+
         echo '</div>';
 
         //revisando valores

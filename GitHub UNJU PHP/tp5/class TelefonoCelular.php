@@ -1,4 +1,4 @@
-<?php 
+<?php
 class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedades
     public $marca;
     public $color;
@@ -28,7 +28,7 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
         if ($this->estado === "encendido" && $this->haciendollamada === "NO"){  //la condicion if verifica q el estado del celular sea "encendido"(esto asegura q el celular esté encendido para realizar la llamada) Y q el celular no esté en una llamada(esto garantiza q no se pueda realizar otra llamada cuando ya está en una)
             $this->numerollamado = $numerollamado;  //se asigna el valor del parámetro $numeroLlamado a la propiedad $numeroLlamado del objeto actual ($this), esto guarda el numero al q se va a llamar
             $this->haciendollamada = "SI";  //la propiedad $haciendollamada se establece en SI xq el celular está en medio de una llamada
-            echo "Llamando al número: $numerollamado <br>"; 
+            echo "Llamando al número: $numerollamado <br>";
         } else { //si el celular esta apagado o en medio de otra llamada muestra el siguiente mensaje
             echo "No se puede realizar la llamada <br>";
         }
@@ -69,12 +69,12 @@ class TelefonoCelular { //creamos la clase TelefonoCelular y todas sus propiedad
     public function getEstado()
     {
         return "<br>
-        Marca: $this->marca <br> 
-        Color: $this->color <br> 
-        Sistema Operativo: $this->so <br> 
-        Número: $this->numero <br> 
-        Número Llamado: $this->numerollamado <br> 
-        Estado: $this->estado <br> 
+        Marca: $this->marca <br>
+        Color: $this->color <br>
+        Sistema Operativo: $this->so <br>
+        Número: $this->numero <br>
+        Número Llamado: $this->numerollamado <br>
+        Estado: $this->estado <br>
         Haciendo Llamada?: $this->haciendollamada <br><br>";
     }
 }

@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>“Programación Orientada a Objetos”</h1>
-    
+
     <?php include 'menu.php'; ?>
 
     <h3>Consigna 4</h3>
@@ -52,7 +52,7 @@
         <br>
 
         <input type="submit" name="submit" value="Calcular nota final">
-    </form>    
+    </form>
 
 </body>
 </html>

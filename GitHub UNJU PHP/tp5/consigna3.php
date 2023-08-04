@@ -14,7 +14,7 @@
     <h1>“Programación Orientada a Objetos”</h1>
 
     <?php include 'menu.php'; ?>
-    
+
     <h3>Consigna 3</h3>
     <p>Crear la clase CabeceraPagina que permita mostrar un título, indicarle si queremos que aparezca centrado, a derecha o izquierda, además permitir definir el color de fondo y de la fuente. Pasar los valores que cargaran los atributos mediante un constructor.</p>
 

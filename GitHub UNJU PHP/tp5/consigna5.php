@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>“Programación Orientada a Objetos”</h1>
-    
+
     <?php include 'menu.php'; ?>
 
     <h3>Consigna 5</h3>
     <p>Crear una clase llamada TelefonoCelular con las siguientes propiedades: marca, color, sistema operativo, número, numerollamado, estado y haciendollamada. Los métodos van a ser: hacerLlamada, terminarLlamada, apagarCelular y encenderCelular.</p>
-    <p>Los valores de los atributos son:</p>    
+    <p>Los valores de los atributos son:</p>
     <table border="1" bgcolor="Cfffff">
         <tr bgcolor="C0C0C0">
             <th>Atributo</th>
@@ -46,8 +46,8 @@
             <td>haciendollamada</td>
             <td>Para saber si una llamada está en curso. Si o no</td>
         </tr>
-    </table>    
-    
+    </table>
+
     <ol>
         <li>Crear un constructor con parámetros para inicializar los valores de los atributos del objeto a crear. El estado inicial es encendido y haciendollamada en No</li>
         <li>El método hacerllamada debe recibir el número al cual se va a llamar y asignarlo a la propiedad numeroLlamado y debe modificar la propiedad haciendoLlamada a Sí.</li>

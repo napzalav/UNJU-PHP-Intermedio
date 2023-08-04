@@ -1,4 +1,4 @@
-<?php 
+<?php
 class Persona { //creamos la clase Persona
     public $nombre; //creamos la propiedad nombre y su nivel de proteccion publica
     public $apellido;  //creamos la propiedad apellido y su nivel de proteccion publica
