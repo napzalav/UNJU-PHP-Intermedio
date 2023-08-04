@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>“PILARES DE LA PROGRAMACIÓN ORIENTADA A OBJETOS”</h1>
-    
+
     <?php include 'menu.php'; ?>
-    
+
     <h3>Consigna 2</h3>
     <p>Usando herencia realice dos clases una Postulante y la otra Empleado, que hereden de la clase Persona.</p>
     <ul>
@@ -36,10 +36,10 @@
     <h3>***********DESARROLLO***********</h3>
 
     <div class="formulario-container">
-        <?php 
+        <?php
         echo '<form class="formulario" action="desarrollo2.php" method="post" enctype="multipart/form-data">';
         //echo '<h2>POSTULANTE</h2>';
-        
+
         include 'formulario.php';
 
         echo '<label for="ingreso">Fecha de ingreso</label>';
@@ -47,7 +47,7 @@
 
         echo '<label for="cv">Cargar CV (.pdf, .doc, .jpg)</label>';
         echo '<input type="file" name="cv" id="cv" accept=".pdf, .doc, .jpg" required><br>';
-        
+
         echo '<br>';
         echo '<input type="submit" name="enviar" value="Enviar">';
         echo '</form>';
@@ -57,7 +57,7 @@
         <?php /*
         echo '<form class="formulario" action="desarrollo2.php" method="post" enctype="multipart/form-data">';
         echo '<h2>EMPLEADO</h2>';
-        
+
         include 'formulario.php';
 
         echo '<label for="ingreso">Fecha de ingreso</label>';
@@ -69,7 +69,7 @@
         echo '<br>';
         */
         ?>
-        
+
     </div>
 </body>
 </html>

@@ -8,12 +8,12 @@
 </head>
 <body>
     <h1>“PILARES DE LA PROGRAMACIÓN ORIENTADA A OBJETOS”</h1>
-    
+
     <?php include 'menu.php'; ?>
-    
+
     <h3>Consigna 4</h3>
     <p>Implementar el polimorfismo (varias formas de resolver un mismo método) para calcular el sueldo de tres tipos de Empleados:</p>
-    
+
     <p>Empleado Informático:</p>
     <ul>Sueldo = $básico + $xcantidadAplicaciones
         <li>$básico = $200.000</li>

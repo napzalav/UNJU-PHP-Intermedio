@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'funciones.php';
 require_once 'CPersona.php';
 //namespace MyNamespace;

@@ -3,7 +3,7 @@
 -->
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" name="nombre" required><br>
-        
+
         <label for="nacimiento">Fecha de nacimiento</label>
         <input type="date" name="nacimiento" required><br>
 
@@ -15,7 +15,7 @@
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
         </select><br>
-        
+
         <label for="disponibilidad">Disponibilidad</label>
         <select name="disponibilidad" id="disponibilidad" required>
             <option value="Part time">Part time</option>

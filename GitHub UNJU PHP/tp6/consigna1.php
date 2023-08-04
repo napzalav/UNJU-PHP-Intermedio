@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>“PILARES DE LA PROGRAMACIÓN ORIENTADA A OBJETOS”</h1>
-    
+
     <?php include 'menu.php'; ?>
-    
+
     <h3>Consigna 1</h3>
     <p>Cargar a través de un formulario los datos de un postulante para un puesto de trabajo. Los datos son los siguientes:</p>
     <ul>
@@ -27,11 +27,11 @@
 
     <h3>***********DESARROLLO***********</h3>
 
-    <?php 
+    <?php
     echo '<form class="formulario" action="desarrollo1.php" method="post" enctype="multipart/form-data">';
-    
-    include 'formulario.php'; 
-    
+
+    include 'formulario.php';
+
     echo '<label for="cv">Cargar CV (.pdf, .doc, .jpg)</label>';
     echo '<input type="file" name="cv" id="cv" accept=".pdf, .doc, .jpg" required><br>';
 

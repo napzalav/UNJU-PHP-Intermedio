@@ -1,4 +1,4 @@
-<?php 
+<?php
 //use MyNamespace\Empleado;
 //use MyNamespace\Postulante;
 include 'funciones.php';

@@ -1,4 +1,4 @@
-<?php 
+<?php
 //use MyNamespace\Empleado;
 
 include 'funciones.php';

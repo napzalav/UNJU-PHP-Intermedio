@@ -33,9 +33,9 @@ function crearDirectorioUploads() {
     //$uploadsDir que es el nombre del directorio (carpeta) que se va a crear
     //0755 son los permisos asignados al directorio, en este caso el 0755 es común y significa que el propietario tiene permisos completos(de lectura, escritura y ejecucion)
     //"true" es un parametro opcional q indica si se deben crear directorios intermedios en el caso de q no existan. En este caso se crearán automaticamente si son necesarios
-//****    $uploadsDir = 'uploads'; 
-//****    if (!is_dir($uploadsDir)) { 
-//****        mkdir($uploadsDir, 0755, true); 
+//****    $uploadsDir = 'uploads';
+//****    if (!is_dir($uploadsDir)) {
+//****        mkdir($uploadsDir, 0755, true);
 //****    }
 
     //mueve un archivo subido a una nueva ubicación, en este caso a la carpeta "uploads": https://www.php.net/manual/es/function.move-uploaded-file.php
@@ -43,8 +43,8 @@ function crearDirectorioUploads() {
     //$filename es el nombre de archivo del archivo subido
     //$destination que es el destino a donde se guardará el archivo
     //$cvPath es la variable que almacena la ruta completa donde se movera el archivo cargado dentro de la carpeta "uploads", quedaria de la siguiente manera-> $cvPath = "uploads/archivoCargado.extension" 
-//****    $cvPath = $uploadsDir . '/' . $cv; 
-//****    move_uploaded_file($_FILES["cv"]["tmp_name"], $cvPath); 
+//****    $cvPath = $uploadsDir . '/' . $cv;
+//****    move_uploaded_file($_FILES["cv"]["tmp_name"], $cvPath);
 
 
 ?>
