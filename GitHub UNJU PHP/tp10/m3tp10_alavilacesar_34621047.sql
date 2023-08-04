@@ -52,15 +52,33 @@ SELECT * FROM empleados WHERE comision <= salario * 0.3;
 
 
 --l. Hallar el salario y la comisión de aquellos empleados cuyo número de documento de identidad es superior al ‘19.709.802’.
+SELECT salario, comision FROM empleados WHERE dni > '19.709.802';
+
+
+--m. Muestra los empleados cuyo nombre empiece entre las letras J y Z (rango). Liste estos empleados y su cargo por orden alfabético.
+SELECT nombre, cargo FROM empleados WHERE nombre >= 'J' AND nombre <= 'Z' ORDER BY nombre;
+
+
+--n. Listar el salario, la comisión, el salario total (salario + comisión), documento de identidad y nombre de aquellos empleados que tienen comisión superior a $1.000.000, ordenar el informe por el número del documento de identidad.
+SELECT salario, comision, (salario + comision), dni, nombre FROM empleados WHERE comision >= 1000000 ORDER BY fecha_incorporacion;
+
+
+--o. Obtener un listado similar al anterior, pero de aquellos que NO tienen comisión.
+SELECT salario, comision, dni, nombre FROM empleados WHERE comision = 0 ORDER BY fecha_incorporacion;
+
+
+--p. Hallar los empleados cuyo nombre no contiene la cadena “MA”.
+SELECT * FROM empleados WHERE nombre NOT LIKE '%MA%';
+
+
+--q. Obtener los nombres de los departamentos que no sean “INVESTIGACIÓN”, ni “VENTAS”, ni ‘MANTENIMIENTO’.
+SELECT nombre FROM `departamentos` WHERE nombre NOT LIKE '%INVESTIGACION%' AND nombre NOT LIKE '%VENTAS%' AND nombre NOT LIKE '%MANTENIMIENTO%';
+
+
+--r. Obtener el nombre y el departamento de los empleados con cargo ‘Secretaria’ o ‘Vendedor’, que no trabajan en el departamento de “PRODUCCIÓN”, cuyo salario es superior a $1.000.000, ordenados por fecha de incorporación.
 
 
 
-m. Muestra los empleados cuyo nombre empiece entre las letras J y Z (rango). Liste estos empleados y su cargo por orden alfabético.
-n. Listar el salario, la comisión, el salario total (salario + comisión), documento de identidad y nombre de aquellos empleados que tienen comisión superior a $1.000.000, ordenar el informe por el número del documento de identidad.
-o. Obtener un listado similar al anterior, pero de aquellos que NO tienen comisión.
-p. Hallar los empleados cuyo nombre no contiene la cadena “MA”.
-q. Obtener los nombres de los departamentos que no sean “INVESTIGACIÓN”, ni “VENTAS”, ni ‘MANTENIMIENTO’.
-r. Obtener el nombre y el departamento de los empleados con cargo ‘Secretaria’ o ‘Vendedor’, que no trabajan en el departamento de “PRODUCCIÓN”, cuyo salario es superior a $1.000.000, ordenados por fecha de incorporación.
 s. Obtener información de los empleados cuyo nombre tiene exactamente 11 caracteres.
 t. Listar los datos de los empleados cuyo nombre inicia por la letra ‘M’, su salario es mayor a $800.000 o reciben comisión, y trabajan en el departamento ‘VENTAS’
 u. Mostrar el salario más alto de la empresa.
