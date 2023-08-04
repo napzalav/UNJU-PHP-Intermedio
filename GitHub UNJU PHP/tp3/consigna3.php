@@ -11,7 +11,7 @@
     <h3>Consigna 3</h3>
     <p>Realizar una función que acepte un número, y retorne la suma de todos los números inferiores a él, incluido dicho número. Por ejemplo, si el número ingresado es 5, deberá devolver: 1+2+3+4+5</p>
     <p>Click para visualizar las otras consignas:</p>
-    
+
     <?php include 'menu.php'; ?>
 
     <form action="#" method="post">
@@ -20,14 +20,14 @@
         <input type="submit" name="verificar">
     </form>
 
-    <?php 
+    <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") { //aqui se verifica si ingresamos un número o no a traves del formulario. verifica si el método de envío del formulario es POST. Esto significa que se espera que el formulario haya sido enviado.
         $numero = $_POST["numero"]; //"numero" es el nombre del campo del formulario del cual queremos obtener el valor. cuando se ingresa el numero se almacena como un array dentro de lavariable llamada $numero
 
         $vectorNum = range(0, $numero);
         echo "<h2>" . "En este vector se almacenan todos los números inferiores a " . $numero . ", incluyéndolo:" . "</h2>";
 
-    $suma = 0;  //la variable $suma se inicializa antes del bucle foreach para almacenar la suma de los valores. 
+    $suma = 0;  //la variable $suma se inicializa antes del bucle foreach para almacenar la suma de los valores.
     echo "[";
     foreach ($vectorNum as $k => $v) {
         echo " - " . $v;

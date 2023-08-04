@@ -11,7 +11,7 @@
     <h3>Consigna 2</h3>
     <p>Realizar una función que permita determinar si un número pasado como parámetro, es par o impar.</p>
     <p>Click para visualizar las otras consignas:</p>
-    
+
     <?php include 'menu.php'; ?>
 
     <form action="#" method="post">

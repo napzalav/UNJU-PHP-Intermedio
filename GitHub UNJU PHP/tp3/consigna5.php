@@ -21,10 +21,10 @@
     <br>
 
     <?php include 'funciones.php';
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") { //aqui se verifica si ingresamos un valor o no a traves del formulario. verifica si el método de envío del formulario es POST. Esto significa que se espera que el formulario haya sido enviado.
         $lado = $_POST["lado"]; //"lado" es el nombre del campo del formulario del cual queremos obtener el valor. cuando se ingresa la longitud del lado del cuadrado se almacena como un array dentro de la variable llamada $lado
-    
+
 
     $datos = infoCuadrado($lado);   //los resultados son guardados en la variable $datos
 

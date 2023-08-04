@@ -11,7 +11,7 @@
     <h3>Consigna 4</h3>
     <p>Desarrollar una función que acepte una cadena de caracteres y la convierta en mayúscula</p>
     <p>Click para visualizar las otras consignas:</p>
-    
+
     <?php include 'menu.php'; ?>
 
     <form action="#" method="post">
@@ -24,7 +24,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") { //aqui se verifica si ingresamos un texto o no a traves del formulario. verifica si el método de envío del formulario es POST. Esto significa que se espera que el formulario haya sido enviado.
         $cadena = $_POST["cadena"]; //"cadena" es el nombre del campo del formulario del cual queremos obtener el valor. cuando se ingresa la cadena de texto se almacena como un array dentro de lavariable llamada $cadena
-    
+
     $cadenaConvertida = mayus($cadena);
     echo "Escribiste la siguiente cadena:";
     echo "<br>";

@@ -11,7 +11,7 @@
     <h3>Consigna 1</h3>
     <p>Realizar una función que acepte dos números y devuelva el producto de ambos. Cargar los dos valores a través de un formulario.</p>
     <p>Click para visualizar las otras consignas:</p>
-    
+
     <?php include 'menu.php'; ?>
 
     <form action="" method="post">
@@ -23,7 +23,7 @@
     <br>
 
     <?php include 'funciones.php';
-    
+
     if (isset($_POST) && !empty($_POST)) {
         $valor1 = $_POST['valor1'];
         $valor2 = $_POST['valor2'];

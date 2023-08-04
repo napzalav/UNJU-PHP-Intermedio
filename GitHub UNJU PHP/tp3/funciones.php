@@ -6,7 +6,7 @@ function producto($valor1, $valor2){
 }
 
 //consigna2
-//Para esta funcion, utilizo el "operador de módulo (%)" ya que este obtiene el resto(o residuo) de la division de un numero entre otro. Si ponemos en una calculadora cientifica de windows el siguiente ejemplo: 77 mod 2 = 1 
+//Para esta funcion, utilizo el "operador de módulo (%)" ya que este obtiene el resto(o residuo) de la division de un numero entre otro. Si ponemos en una calculadora cientifica de windows el siguiente ejemplo: 77 mod 2 = 1
 //vemos que el modulo de 77 dividido entre 2 deja un resto de 1, por lo tanto 77 NO es par, es IMPAR
 function paridad($numero){
     if ($numero % 2 == 0) {
