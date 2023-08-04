@@ -8,13 +8,13 @@
 <body>
     <h1>“FUNCIONES INTERNAS PHP”</h1>
     <p>Click para visualizar las otras consignas:</p>
-    
+
     <?php include 'menu.php'; ?>
 
     <h3>Consigna 3</h3>
     <p>Realizar la porción de código PHP que controle:</p>
     <ol>
-        <li><b>Entrada:</b> juanperezcom.ar 
+        <li><b>Entrada:</b> juanperezcom.ar
             <br>
             <b>Mensaje de Salida:</b> “e-mail incorrecto, no se encuentra el símbolo @”</li>
             <br>

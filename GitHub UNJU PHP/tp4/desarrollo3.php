@@ -1,4 +1,4 @@
-<?php 
+<?php
 echo '<a href="./consigna3.php">Regresar a la consigna 3</a><br><br>';
 
 if (isset($_POST) && !empty($_POST)) { //verificamos que se haya enviado un email a traves del formulario y que este campo no se encuentre vacío

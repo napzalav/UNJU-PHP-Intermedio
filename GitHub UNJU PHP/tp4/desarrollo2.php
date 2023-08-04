@@ -53,7 +53,7 @@ var_dump($res);
 //Reemplaza todas las apariciones de una subcadena por otra en una cadena principal. Es utilizada para realizar modificaciones en una cadena, como cambiar una palabra específica por otra o reemplazar caracteres no deseados.
 
 //En la cuarta linea:
-//$res = str_replace($array1,$array2,$calculo); 
+//$res = str_replace($array1,$array2,$calculo);
 
 //lo que hace la funcion str_replace() es:
 //Buscar todos los elementos dentro del -->                             $array1
@@ -74,7 +74,7 @@ var_dump($res);
 
 //la funcion substr() esta compuesta de tres parametros:
 //$res -->  es la cadena de la cual se tomará la subcadena
-//1 -->     es el índice donde comenzará la subcadena 
+//1 -->     es el índice donde comenzará la subcadena
 //2 -->     es la longitud que tendrá la subcadena
 
 //entonces obtenemos como RESULTADO de la subcadena que:

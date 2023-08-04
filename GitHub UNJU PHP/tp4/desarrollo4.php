@@ -1,4 +1,4 @@
-<?php 
+<?php
 echo '<a href="./consigna4.php">Volver a cargar el DNI</a><br><br>';
 
 if (isset($_POST)){ //verificamos que se haya enviado un dni a traves del formulario
@@ -18,7 +18,7 @@ if (isset($_POST)){ //verificamos que se haya enviado un dni a traves del formul
         } else { //cualquier otro caso que no cumpla con las condiciones de jubilacion y valido va a ser rechazado
             echo "DNI inválido <br>";
             echo "No cumple la cantidad de caracteres válida";
-        }     
+        }
     }
 }
 ?>
