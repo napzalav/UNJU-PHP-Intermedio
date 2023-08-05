@@ -130,6 +130,13 @@ GROUP BY codigo_dpto
 HAVING COUNT(*) > 3;
 
 
-cc. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige. Solo los que tengan más de un empleado.
+--cc. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige. Solo los que tengan más de un empleado.
+SELECT e1.jefe_id AS codigo_jefe, e2.nombre AS nombre_jefe, COUNT(*) AS num_empleados_dirigidos --seleccionamos "e1.jefe_id" como el codigo del jefe, "e2.nombre" como el nombre del jefe y utilizamos la función de agregación COUNT para contar el numero de empleados que estan dirigidos por cada jefe
+FROM empleados e1
+INNER JOIN empleados e2 ON e1.jefe_id = e2.dni --hacemos un INNER JOIN con la tabla empleados dos veces, una vez como e1 para representar los empleados que tienen jefe (jefe_id no es nulo) y otra vez como e2 para representar los jefes (se relacionan mediante jefe_id = dni).
+GROUP BY e1.jefe_id, e2.nombre --usamos GROUP BY para agrupar los resultados por el código del jefe (e1.jefe_id) y el nombre del jefe (e2.nombre).
+HAVING COUNT(*) > 1; --filtramos aquellos jefes que tienen más de un empleado a su cargo
+
+
 dd. Hallar los departamentos que no tienen empleados.
 ee. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma.
