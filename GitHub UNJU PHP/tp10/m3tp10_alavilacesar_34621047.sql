@@ -76,11 +76,17 @@ SELECT nombre FROM `departamentos` WHERE nombre NOT LIKE '%INVESTIGACION%' AND n
 
 
 --r. Obtener el nombre y el departamento de los empleados con cargo ‘Secretaria’ o ‘Vendedor’, que no trabajan en el departamento de “PRODUCCIÓN”, cuyo salario es superior a $1.000.000, ordenados por fecha de incorporación.
+SELECT nombre, codigo_dpto FROM empleados WHERE (cargo = 'Secretaria' OR cargo = 'Vendedor') AND codigo_dpto != 1500 AND salario > 1000000 ORDER BY fecha_incorporacion;
 
 
+--s. Obtener información de los empleados cuyo nombre tiene exactamente 11 caracteres.
+SELECT * FROM empleados WHERE LENGTH(nombre) = 11;
 
-s. Obtener información de los empleados cuyo nombre tiene exactamente 11 caracteres.
-t. Listar los datos de los empleados cuyo nombre inicia por la letra ‘M’, su salario es mayor a $800.000 o reciben comisión, y trabajan en el departamento ‘VENTAS’
+
+--t. Listar los datos de los empleados cuyo nombre inicia por la letra ‘M’, su salario es mayor a $800.000 o reciben comisión, y trabajan en el departamento ‘VENTAS’
+SELECT * FROM empleados WHERE nombre LIKE 'M%' AND (salario > 800000 OR comision > 0) AND cargo = 'Vendedor';
+
+
 u. Mostrar el salario más alto de la empresa.
 v. Mostrar cada una de las comisiones y el número de empleados que las reciben.
 Solo si tiene comisión.
