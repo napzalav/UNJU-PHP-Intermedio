@@ -87,12 +87,28 @@ SELECT * FROM empleados WHERE LENGTH(nombre) = 11;
 SELECT * FROM empleados WHERE nombre LIKE 'M%' AND (salario > 800000 OR comision > 0) AND cargo = 'Vendedor';
 
 
-u. Mostrar el salario más alto de la empresa.
-v. Mostrar cada una de las comisiones y el número de empleados que las reciben.
-Solo si tiene comisión.
-w. Mostrar el nombre del último empleado de la lista por orden alfabético.
-x. Hallar el salario más alto, el más bajo y la diferencia entre ellos.
-y. Mostrar el número de empleados de sexo femenino y de sexo masculino, pordepartamento.
+--u. Mostrar el salario más alto de la empresa.
+SELECT MAX(salario) FROM empleados;
+SELECT MAX(salario) AS salario_maximo FROM empleados; --si quiero que me devuelva como resultado una columna con el nombre "salario_maximo"
+
+
+--v. Mostrar cada una de las comisiones y el número de empleados que las reciben. Solo si tiene comisión.
+SELECT comision, COUNT(*) AS num_empleados FROM empleados WHERE comision > 0 GROUP BY comision;
+
+
+--w. Mostrar el nombre del último empleado de la lista por orden alfabético.
+SELECT nombre from empleados ORDER BY nombre DESC LIMIT 1;
+
+
+--x. Hallar el salario más alto, el más bajo y la diferencia entre ellos.
+SELECT MAX(salario), MIN(salario), (MAX(salario) - MIN(salario)) from empleados;
+SELECT MAX(salario), MIN(salario), (MAX(salario) - MIN(salario)) AS diferencia from empleados; --si quiero que el resultado se guarde en una nueva columna llamada "diferencia"
+
+
+--y. Mostrar el número de empleados de sexo femenino y de sexo masculino, por departamento.
+
+
+
 z. Hallar el salario promedio por departamento.
 aa. Mostrar la lista de los empleados cuyo salario es mayor o igual que el promedio de la empresa. Ordenarlo por departamento.
 bb. Hallar los departamentos que tienen más de tres empleados. Mostrar el número
