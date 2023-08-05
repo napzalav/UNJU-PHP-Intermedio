@@ -138,6 +138,9 @@ GROUP BY e1.jefe_id, e2.nombre --usamos GROUP BY para agrupar los resultados por
 HAVING COUNT(*) > 1; --filtramos aquellos jefes que tienen más de un empleado a su cargo
 
 
+--*********************NOTA***************
+--en el ejercicio dd. encuentro empleados en todos los departamentos por lo que la consulta a continuacion arroja resultado vacío, compruebo esto en el siguiente comentario donde reviso que cantidad de empleados tiene cada departamento
+
 --dd. Hallar los departamentos que no tienen empleados.
 SELECT d.codigo_dpto, d.nombre
 FROM departamentos d
