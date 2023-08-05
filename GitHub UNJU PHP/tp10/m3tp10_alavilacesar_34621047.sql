@@ -120,11 +120,16 @@ SELECT codigo_dpto, AVG(salario) AS salario_promedio FROM empleados GROUP BY cod
 
 
 --aa. Mostrar la lista de los empleados cuyo salario es mayor o igual que el promedio de la empresa. Ordenarlo por departamento.
+SELECT * FROM empleados WHERE salario >= (SELECT AVG (salario) FROM empleados) ORDER BY codigo_dpto;
 
 
+--bb. Hallar los departamentos que tienen más de tres empleados. Mostrar el número de empleados de esos departamentos.
+SELECT codigo_dpto, COUNT(*) AS num_empleados
+FROM empleados
+GROUP BY codigo_dpto
+HAVING COUNT(*) > 3;
 
-bb. Hallar los departamentos que tienen más de tres empleados. Mostrar el número
-de empleados de esos departamentos.
+
 cc. Mostrar el código y nombre de cada jefe, junto al número de empleados que dirige. Solo los que tengan más de un empleado.
 dd. Hallar los departamentos que no tienen empleados.
 ee. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma.
