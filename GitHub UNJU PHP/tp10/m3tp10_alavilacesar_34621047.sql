@@ -1,7 +1,9 @@
 -- TP 10
 --detalle a tener en cuenta con relación a ***las backsticks (``)*** parece no tener impacto si en las consultas llevan o no backsticks en los nombre de las tablas
 
+--************************************************************************************************************************
 --Punto 1 : Descargue e importe la Base de Datos llamada miempresa.sql. Luego realice las siguientes consultas y muestre los resultados obtenidos
+--************************************************************************************************************************
 
 --a. Obtener los datos completos de los empleados.
 SELECT * FROM `empleados`;
@@ -151,3 +153,8 @@ WHERE e.dni IS NULL;
 
 --ee. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma.
 SELECT d.nombre AS nombre_departamento, SUM(e.salario) AS suma_salarios FROM departamentos d JOIN empleados e ON d.codigo_dpto = e.codigo_dpto GROUP BY d.codigo_dpto, d.nombre ORDER BY suma_salarios DESC LIMIT 1;
+
+
+--************************************************************************************************************************
+--Punto 2 : Realizar la inserción de cinco transacciones (ingresos y egresos) en la base de datos que se creó del proyecto integrador
+--************************************************************************************************************************
