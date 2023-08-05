@@ -72,7 +72,7 @@ SELECT * FROM empleados WHERE nombre NOT LIKE '%MA%';
 
 
 --q. Obtener los nombres de los departamentos que no sean “INVESTIGACIÓN”, ni “VENTAS”, ni ‘MANTENIMIENTO’.
-SELECT nombre FROM `departamentos` WHERE nombre NOT LIKE '%INVESTIGACION%' AND nombre NOT LIKE '%VENTAS%' AND nombre NOT LIKE '%MANTENIMIENTO%';
+SELECT nombre FROM departamentos WHERE nombre NOT LIKE '%INVESTIGACION%' AND nombre NOT LIKE '%VENTAS%' AND nombre NOT LIKE '%MANTENIMIENTO%';
 
 
 --r. Obtener el nombre y el departamento de los empleados con cargo ‘Secretaria’ o ‘Vendedor’, que no trabajan en el departamento de “PRODUCCIÓN”, cuyo salario es superior a $1.000.000, ordenados por fecha de incorporación.
@@ -138,5 +138,13 @@ GROUP BY e1.jefe_id, e2.nombre --usamos GROUP BY para agrupar los resultados por
 HAVING COUNT(*) > 1; --filtramos aquellos jefes que tienen más de un empleado a su cargo
 
 
-dd. Hallar los departamentos que no tienen empleados.
-ee. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma.
+--dd. Hallar los departamentos que no tienen empleados.
+SELECT d.codigo_dpto, d.nombre
+FROM departamentos d
+LEFT JOIN empleados e ON d.codigo_dpto = e.codigo_dpto
+WHERE e.dni IS NULL;
+--*******visualizar la cantidad de empleados que tiene cada departamento:****
+--SELECT d.codigo_dpto, d.nombre, COUNT(*) AS num_empleados FROM departamentos d JOIN empleados e ON d.codigo_dpto = e.codigo_dpto GROUP BY d.codigo_dpto, d.nombre;
+
+--ee. Mostrar el nombre del departamento cuya suma de salarios sea la más alta, indicando el valor de la suma.
+SELECT d.nombre AS nombre_departamento, SUM(e.salario) AS suma_salarios FROM departamentos d JOIN empleados e ON d.codigo_dpto = e.codigo_dpto GROUP BY d.codigo_dpto, d.nombre ORDER BY suma_salarios DESC LIMIT 1;
