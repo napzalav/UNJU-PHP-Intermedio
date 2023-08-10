@@ -157,4 +157,57 @@ SELECT d.nombre AS nombre_departamento, SUM(e.salario) AS suma_salarios FROM dep
 
 --************************************************************************************************************************
 --Punto 2 : Realizar la inserción de cinco transacciones (ingresos y egresos) en la base de datos que se creó del proyecto integrador
+--adjunto dentro de la carpeta tp10 la base m3tp9_alavilacesar_34621047DB correspondiente al ejercicio
 --************************************************************************************************************************
+
+--
+-- Estructura de tabla para la tabla `movimientos`
+--
+
+CREATE TABLE `movimientos` (
+    `id_Movimientos` int(11) NOT NULL,
+    `fecha` date NOT NULL,
+    `monto` float NOT NULL,
+    `forma de pago` varchar(45) NOT NULL,
+    `tipo` varchar(45) NOT NULL,
+    `descripcion` varchar(255) NOT NULL,
+    `Persona_idPersona` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `movimientos`
+--
+
+INSERT INTO `movimientos` (`id_Movimientos`, `fecha`, `monto`, `forma de pago`, `tipo`, `descripcion`, `Persona_idPersona`) VALUES
+(5, '1812-08-02', 10.5, 'efectivo', 'egreso', 'compra de caballo por cumpleaños n34', 3),
+(6, '1845-01-01', 100, 'cheque', 'egreso', 'compra de papel para escribir Civilización y Barbarie', 4),
+(7, '1817-04-28', 1000, 'efectivo', 'ingreso', 'Victoria en la Batalla de Rosario de Lerma, se obtuvieron diversas especias y ganado', 1),
+(8, '1816-03-03', 1750, 'transferencia', 'ingreso', 'ataque al general español La Hera cerca de Villar. Se recuperan fusiles, caballos, estandarte enemigo y rescate de su esposo', 2),
+(9, '1812-01-01', 200, 'efectivo', 'egreso', 'compra de tela para confeccionar la Bandera Nacional e izarla el 27 de febrero de 1812 por primera vez, a orillas del río Paraná', 5);
+
+-- --------------------------------------------------------
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `persona`
+--
+
+CREATE TABLE `persona` (
+    `id_Persona` int(11) NOT NULL,
+    `nombre` varchar(45) NOT NULL,
+    `rol` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`id_Persona`, `nombre`, `rol`) VALUES
+(1, 'Martin Miguel de Guemes', 'hijo'),
+(2, 'Juana Azurduy', 'hija'),
+(3, 'José de San Martin', 'padre'),
+(4, 'Domingo Faustino Sarmiento', 'hijo'),
+(5, 'Manuel Belgrano', 'tio');
+
+--

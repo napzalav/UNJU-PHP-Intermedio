@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-08-2023 a las 09:17:19
+-- Tiempo de generación: 10-08-2023 a las 03:42:26
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -37,6 +37,17 @@ CREATE TABLE `movimientos` (
   `Persona_idPersona` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `movimientos`
+--
+
+INSERT INTO `movimientos` (`id_Movimientos`, `fecha`, `monto`, `forma de pago`, `tipo`, `descripcion`, `Persona_idPersona`) VALUES
+(5, '1812-08-02', 10.5, 'efectivo', 'egreso', 'compra de caballo por cumpleaños n34', 3),
+(6, '1845-01-01', 100, 'cheque', 'egreso', 'compra de papel para escribir Civilización y Barbarie', 4),
+(7, '1817-04-28', 1000, 'efectivo', 'ingreso', 'Victoria en la Batalla de Rosario de Lerma, se obtuvieron diversas especias y ganado', 1),
+(8, '1816-03-03', 1750, 'transferencia', 'ingreso', 'ataque al general español La Hera cerca de Villar. Se recuperan fusiles, caballos, estandarte enemigo y rescate de su esposo', 2),
+(9, '1812-01-01', 200, 'efectivo', 'egreso', 'compra de tela para confeccionar la Bandera Nacional e izarla el 27 de febrero de 1812 por primera vez, a orillas del río Paraná', 5);
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +59,17 @@ CREATE TABLE `persona` (
   `nombre` varchar(45) NOT NULL,
   `rol` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`id_Persona`, `nombre`, `rol`) VALUES
+(1, 'Martin Miguel de Guemes', 'hijo'),
+(2, 'Juana Azurduy', 'hija'),
+(3, 'José de San Martin', 'padre'),
+(4, 'Domingo Faustino Sarmiento', 'hijo'),
+(5, 'Manuel Belgrano', 'tio');
 
 --
 -- Índices para tablas volcadas
@@ -74,13 +96,13 @@ ALTER TABLE `persona`
 -- AUTO_INCREMENT de la tabla `movimientos`
 --
 ALTER TABLE `movimientos`
-  MODIFY `id_Movimientos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Movimientos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id_Persona` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Persona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
