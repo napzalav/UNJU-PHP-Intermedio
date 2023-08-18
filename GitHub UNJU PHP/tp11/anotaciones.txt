@@ -1,0 +1,193 @@
+**consulta modificada
+id_mov
+id_familia
+forma_de_pago
+
+SELECT movimientos.id_mov as id_mov, fecha, tipo, descripcion, monto, forma_de_pago, familiares.nombre as nombre FROM familiares LEFT JOIN movimientos ON movimientos.id_familia = familiares.id_familia ORDER BY fecha DESC;
+
+
+<!-- <div class="mb-3">
+                <label for="responsable" class="form-label">Responsable</label>
+                <select class="form-select" name="responsable">
+                    <option selected>Selecciona al responsable del movimiento</option>
+                    <?php
+                    // Obtener los familiares de la base de datos y crear opciones en el menú desplegable
+                    $sqlFamiliares = "SELECT id_familia, nombre FROM familiares";
+                    $resultFamiliares = $mysqli->query($sqlFamiliares);
+
+                    while ($rowFamiliar = $resultFamiliares->fetch_assoc()) {
+                        echo '<option value="' . $rowFamiliar['id_familia'] . '">' . $rowFamiliar['nombre'] . '</option>';
+                    }
+                    ?>
+                </select>
+            </div> -->
+
+
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recoger los datos del formulario
+    $fecha = $_POST["fecha"];
+    $tipo = $_POST["tipo"];
+    $descripcion = $_POST["descripcion"];
+    $monto = $_POST["monto"];
+    $forma_de_pago = $_POST["forma_de_pago"];
+
+    // Preparar la consulta SQL para la inserción
+    $sql = "INSERT INTO movimientos (fecha, tipo, descripcion, monto, forma_de_pago) VALUES (?, ?, ?, ?, ?)";
+
+    // Preparar la sentencia
+    if ($stmt = $mysqli->prepare($sql)) {
+        // Vincular los parámetros
+        $stmt->bind_param("sssss", $fecha, $tipo, $descripcion, $monto, $forma_de_pago);
+
+        // Ejecutar la sentencia
+        if ($stmt->execute()) {
+            // Redirigir a la página de listado (index.php) con un mensaje de éxito
+            header("location: index.php?message=success");
+            exit();
+        } else {
+            echo "Error en la ejecución de la consulta: " . $stmt->error;
+        }
+
+        // Cerrar la sentencia
+        $stmt->close();
+    }
+
+    // Cerrar la conexión a la base de datos
+    $mysqli->close();
+}
+
+/*
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo movimiento</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="formulario">
+        <form action="insert.php" method="POST">
+            <div class="campos">
+                <div class="mb-3">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" name="fecha">
+                </div>
+
+                <div class="mb-3">
+                    <label for="tipo">Tipo</label>
+                    <select class="form-select" aria-label="Tipo de movimiento" name="tipo">
+                        <option value="" selected disabled>Selecciona el tipo de movimiento</option>
+                        <option value="ingreso">INGRESO</option>
+                        <option value="egreso">EGRESO</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="descripcion">Descripcion del movimiento</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="monto">Monto</label>
+                    <input type="number" class="form-control" id="monto" name="monto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="pago">Forma de pago</label>
+                    <select class="form-select" aria-label="pago" name="forma_de_pago">
+                        <option value="" selected disabled>Selecciona la forma de pago</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="cheque">Cheque</option>
+                        <option value="tarjeta de crédito">Tarjeta de crédito</option>
+                        <option value="transferencia bancaria">Transferencia bancaria</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="responsable">Responsable</label>
+                    <select class="form-select" name="responsable">
+                        <option value="" selected disabled>Selecciona al responsable del movimiento</option>
+                        <?php
+                        // Obtener los familiares de la base de datos y crear opciones en el menú desplegable
+                        $sqlFamiliares = "SELECT id_familia, nombre FROM familiares";
+                        $resultFamiliares = $mysqli->query($sqlFamiliares);
+
+                        while ($rowFamiliar = $resultFamiliares->fetch_assoc()) {
+                            echo '<option value="' . $rowFamiliar['id_familia'] . '">' . $rowFamiliar['nombre'] . '</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agregar movimiento</button>
+        </form>
+    </div>
+</body>
+
+</html>
+*/
+
+***************************************
+*************INDEX********************
+
+<?php
+                        //include config table
+                        require_once "config.php";
+                        error_reporting(E_ALL);
+                        ini_set('display_errors', '1');
+
+                        //Attempts select query execution
+                        $sql = "SELECT movimientos.id_mov as id_mov, fecha, tipo, descripcion, monto, forma_de_pago, familiares.nombre as nombre FROM familiares LEFT JOIN movimientos ON movimientos.id_familia = familiares.id_familia ORDER BY fecha DESC";
+                        if ($result = $mysqli->query($sql)) {
+                            if ($result->num_rows > 0) {
+                                echo '<table class="table table-bordered table-striped">';
+                                echo "<thead>";
+                                echo "<tr>";
+                                echo "<th>#</th>";
+                                echo "<th>Fecha</th>";
+                                echo "<th>Tipo</th>";
+                                echo "<th>Descripcion</th>";
+                                echo "<th>Monto</th>";
+                                echo "<th>Forma Pago</th>";
+                                echo "<th>Responsable</th>";
+                                echo "<th>Action</th>";
+                                echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while ($row = $result->fetch_array()) {
+                                    echo "<td>" . $row['id_mov'] . "</td>";
+                                    echo "<td>" . $row['fecha'] . "</td>";
+                                    echo "<td>" . $row['tipo'] . "</td>";
+                                    echo "<td>" . $row['descripcion'] . "</td>";
+                                    echo "<td>" . $row['monto'] . "</td>";
+                                    echo "<td>" . $row['forma_de_pago'] . "</td>";
+                                    echo "<td>" . $row['nombre'] . "</td>";
+                                    echo "<td>";
+                                    echo '<a href="view.php?id=' . $row['id_mov'] . '" class="mr-3" title="Ver Registro" data-toogle=tooltip"><span class="fa fa-eye"></span></a>';
+                                    echo '<a href="update.php?id=' . $row['id_mov'] . '" class="mr-3" title="Actualizar Registro" data-toogle=tooltip"><span class="fa fa-pencil"></span></a>';
+                                    echo '<a href="delete.php?id=' . $row['id_mov'] . '" class="mr-3" title="Borrar Registro" data-toogle=tooltip"><span class="fa fa-trash"></span></a>';
+                                    echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";
+                                echo "</table>";
+                                //Free result set
+                                $result->free();
+                            } else {
+                                echo '<div class="alert alert-danger"><em>No se encontraron registros</em></div>';
+                            }
+                        }
+
+                        // Cerrar la conexión a la base de datos
+                        $mysqli->close();
+
+                        ?>

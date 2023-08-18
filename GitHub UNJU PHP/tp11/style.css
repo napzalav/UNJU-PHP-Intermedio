@@ -1,0 +1,90 @@
+header {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header .container-cabecera{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+nav.navbar {
+    width: 100%;
+    color: aliceblue;
+}
+
+.tarjetas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+table tr td:last-child {
+    width: 120px;
+}
+
+.formulario {
+    background-color: #e6edfb;
+    width: 50rem;
+    height: 100%;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card.text-center.mb-3 {
+    width: 30rem;
+}
+
+.registro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* align-content: flex-start; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
